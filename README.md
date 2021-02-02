@@ -1,2 +1,3 @@
 # ToDo List 
-ToDo List using a JavaScript and Css
+ToDo List using a __JavaScript__ and __Css__
+

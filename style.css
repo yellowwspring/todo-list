@@ -61,6 +61,7 @@ form button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease; /* time of transition from waiting to action -- time of decay*/
 }
 
 
@@ -91,4 +92,45 @@ form button:hover{
 .completed{
     text-decoration: line-through;
     opacity: 0.5;
+    transition: all 1s ease;
+}
+
+.fall{ /* при нажатии на ведерко будет меняться градус и вертикальное положение + уменьшится непрозрачность до нуля*/
+    transform: translateY(8rem) rotateZ(10deg);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: #180672;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #8f65fe;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: whitesmoke;
+    color: #180672;
 }

@@ -49,7 +49,12 @@ function deleteCheck(e){
     // delete todo
     if(item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
-        todo.remove();
+        // animation fall in down
+        todo.classList.add("fall");
+        todo.addEventListener('transitionend', function (){
+            todo.remove(); // delete line of list after animation 
+        })
+        /*todo.remove();*/
     }
 
     // CHECK MARK
